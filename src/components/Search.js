@@ -1,5 +1,7 @@
 import React from 'react'
 import TMDb from './TMDb'
+import Loader from 'react-loader-spinner'
+import PowerPoint from './PowerPoint'
 
 export default class Search extends React.Component{
 
@@ -22,13 +24,14 @@ export default class Search extends React.Component{
     render(){
         if(this.state.loading){
             return(
-                <div>Loading...</div>
+                <Loader type="TailSpin" color="#808080" height={50} width={50} className="spinner" />
             )
         }else{
             return(
                 <div className="results">
                     <h2>Resultados ({this.state.results.length})</h2>
                     <h3>{ this.state.search }</h3>
+                    <button onClick={ ()=> PowerPoint(this.state.results) }>Download PowerPoint</button>
                         {this.state.results.map((value, index) => {
                             var realizadores = ""
                             var atores = ""

@@ -81,3 +81,20 @@ header img{
   height: 30px;
   font-size: 20px;
 }
+
+.spinner{
+  display: flex;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+
+button{
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px;
+  margin-left: auto;
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
