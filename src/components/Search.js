@@ -31,7 +31,8 @@ export default class Search extends React.Component{
                 <div className="results">
                     <h2>Resultados ({this.state.results.length})</h2>
                     <h3>{ this.state.search }</h3>
-                    <button onClick={ ()=> PowerPoint(this.state.results) }>Download PowerPoint</button>
+                    {/* No caso de não ter resultados não mostrar o botão de download do powerpoint */}
+                    { this.state.results.length === 0 ? null : <button onClick={ ()=> PowerPoint(this.state.results) }>Download PowerPoint</button> }
                         {this.state.results.map((value, index) => {
                             var realizadores = ""
                             var atores = ""
