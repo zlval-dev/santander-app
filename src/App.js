@@ -26,7 +26,7 @@ function App() {
           </div>
           <div className="search" onClick={ () => { $('#input').focus() } }>
             <FontAwesomeIcon icon={ faSearch } style={{ marginLeft: '5px' }} />
-            <input type="text" name="search" autoFocus autoComplete="off" id="input" onKeyDown={ startSearch } />
+            <input type="text" name="search" autoFocus autoComplete="off" id="input" onKeyDown={ startSearch } placeholder="Nome do ator ou realizador" />
           </div>
         </header>
         <Route path="/result/:search" component={ Search }>
