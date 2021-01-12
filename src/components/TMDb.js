@@ -43,7 +43,7 @@ const TMDb = async (search) => {
                                 nome: el.title,
                                 realizadores: directors,
                                 atores: actors,
-                                ano: el.release_date
+                                ano: el.release_date.split("-")[0] // Apresentação apenas do ano de lançamento do filme
                             })
                         }
                     }
